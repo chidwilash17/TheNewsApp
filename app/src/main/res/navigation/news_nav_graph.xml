@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/headlinesFragment2"> <!-- Assuming Headlines is the typical start -->
+
+    <!-- ArticleFragment: Destination for showing a single article -->
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.thenewsapp.ui.fragments.ArticleFragment"
+        android:label="ArticleFragment"
+        tools:layout="@layout/fragment_article">
+
+        <!-- Argument definition for passing an Article object -->
+        <!-- This argument MUST be defined INSIDE the fragment tag that receives it -->
+        <argument
+            android:name="article"
+            app:argType="com.example.thenewsapp.models.Article" />
+        <!-- If 'article' can be null and you want to allow navigating here without an article:
+             app:nullable="true"
+             android:defaultValue="@null" />
+        -->
+    </fragment>
+
+    <!-- HeadlinesFragment: Shows a list of headlines -->
+    <fragment
+        android:id="@+id/headlinesFragment2"
+        android:name="com.example.thenewsapp.ui.fragments.HeadlinesFragment"
+        android:label="HeadlinesFragment"
+        tools:layout="@layout/fragment_headlines">
+
+        <!-- Action to navigate from Headlines to a specific Article -->
+        <action
+            android:id="@+id/action_headlinesFragment2_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <!-- When using this action, you will pass the 'article' argument programmatically
+             The Safe Args generated direction class will have a method that takes an Article. -->
+    </fragment>
+
+    <!-- FavouritesFragment: Shows a list of saved/favourite articles -->
+    <fragment
+        android:id="@+id/favouritesFragment2"
+        android:name="com.example.thenewsapp.ui.fragments.FavouritesFragment"
+        android:label="FavouritesFragment"
+        tools:layout="@layout/fragment_favourites">
+
+        <!-- Action to navigate from Favourites to a specific Article -->
+        <action
+            android:id="@+id/action_favouritesFragment2_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+
+    <!-- SearchFragment: Allows searching for articles -->
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.example.thenewsapp.ui.fragments.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+        <!-- Action to navigate from Search results to a specific Article -->
+        <action
+            android:id="@+id/action_searchFragment2_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+
+    <!--
+        Any global actions or arguments (arguments defined directly under <navigation>)
+        were removed as the 'article' argument is specific to ArticleFragment.
+        If you had other global elements, they would remain here.
+    -->
+
+</navigation>

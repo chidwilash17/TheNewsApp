@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Your existing colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="yellow">#ffc000</color>
+
+    <!-- Extra Colors -->
+
+    <!-- Basic Grays -->
+    <color name="grey_light">#D3D3D3</color>
+    <color name="grey_medium">#A9A9A9</color>
+    <color name="grey_dark">#696969</color>
+    <color name="grey_transparent">#80696969</color> <!-- Grey with 50% transparency -->
+
+    <!-- Common UI Colors -->
+    <color name="red_error">#D32F2F</color>
+    <color name="green_success">#388E3C</color>
+    <color name="blue_info">#1976D2</color>
+    <color name="orange_warning">#FFA000</color>
+
+    <!-- Material Design Primary/Accent (Examples - choose your own) -->
+    <color name="colorPrimary">#6200EE</color> <!-- Example Material Purple -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Example Darker Material Purple -->
+    <color name="colorAccent">#03DAC5</color> <!-- Example Material Teal -->
+
+    <!-- Additional Palette Colors -->
+    <color name="blue_sky">#87CEEB</color>
+    <color name="green_forest">#228B22</color>
+    <color name="red_lipstick">#C71585</color>
+    <color name="orange_sunset">#FF8C00</color>
+    <color name="pink_light">#FFC0CB</color>
+    <color name="teal_dark">#008080</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#DE000000</color> <!-- 87% black for primary text -->
+    <color name="text_secondary">#8A000000</color> <!-- 54% black for secondary text -->
+    <color name="text_disabled">#61000000</color> <!-- 38% black for disabled text -->
+    <color name="text_primary_inverse">#FFFFFFFF</color> <!-- White for text on dark backgrounds -->
+    <color name="text_secondary_inverse">#B3FFFFFF</color> <!-- 70% white for secondary text on dark backgrounds -->
+
+    <!-- Background Colors -->
+    <color name="background_light">#FAFAFA</color> <!-- Very light grey, good for screen backgrounds -->
+    <color name="background_dark">#303030</color>  <!-- Dark grey, good for dark theme backgrounds -->
+    <color name="divider_color">#1F000000</color> <!-- 12% black, common for dividers -->
+
+</resources>
